@@ -25,5 +25,5 @@ steps:
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Pipeline.Workspace)/s/build'
-    artifact: 'react080825Devv'
+    artifact: 'react080825Dev'
     publishLocation: 'pipeline'
