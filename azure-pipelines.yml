@@ -21,9 +21,14 @@ steps:
     npm install
     npm run build
   displayName: 'npm install and build'
-
+- script: |
+    echo "Pipeline Workspace structure:"
+    echo "Workspace path: $(Pipeline.Workspace)"
+    ls -R $(Pipeline.Workspace)
+  displayName: 'Display Pipeline Workspace structure'
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Pipeline.Workspace)/s/build'
     artifact: 'react080825Dev'
     publishLocation: 'pipeline'
+    
